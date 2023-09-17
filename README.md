@@ -1,4 +1,6 @@
-# Learning Roblox Game Programming (base on Lua / Luau)
+# Learning Roblox Game Programming
+
+## (base on Lua / Luau)
  
 This is the repository to hold hands-on practices on learning the basic toolset (Lua/Luau), then searving the game programming in Roblox Studio.
 
