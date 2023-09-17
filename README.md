@@ -16,6 +16,8 @@ Some starting resources:
 - Luau - the customized Lua by Roblox
 - LOVE Platform
 
+Look at the [mindmap of learning](/Roblox%20Game%20Programming.html)
+
 There will be series videos to be captured for recording the learning journey, see at [my YouTube Channel List](https://www.youtube.com/playlist?list=PL6DEHvciXKeXNjL7xG9WXx6NgGeJC30Zz).
 
 Enjoy!
