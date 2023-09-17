@@ -1,0 +1,184 @@
+ Roblox Game Programming
+
+# Language
+
+## Standard Lua
+ (see:Roblox Specific: Luau)
+### Basic: Programming in Lua (Roberto)
+
+#### Part One: The Basics
+
+##### 01 Getting Started
+
+##### 02 Interlude: The Eight-Queen Puzzle
+
+##### 03 Numbers
+
+##### 04 Strings
+
+##### 05 Tables
+
+##### 06 Functions
+
+##### 07 The External World
+
+##### 08 Filling some Gaps
+
+#### Part Two: Real Programming
+
+##### 09 Closures
+
+##### 10 Pattern Matching
+
+##### 11 Interlude: Most Frequent Words
+
+##### 12 Date and Time
+
+##### 13 Bits and Bytes
+
+##### 14 Data Structures
+
+##### 15 Data Files and Serialization
+
+##### 16 Compilation, Execution, and Errors
+
+##### 17 Modules and Packages
+
+#### Part Three: Lua-isms
+
+##### 18 Iterators and the Generic for
+
+##### 19 Interlude: Markov Chain Algorithm
+
+##### 20 Metatables and Metamethods
+
+##### 21 Object-Oriented Programming
+
+##### 22 The Environment
+
+##### 23 Garbage
+
+##### 24 Coroutines
+
+##### 25 Reflection
+
+##### 26 Interlude: Multithreading with Coroutines
+
+#### Part Four: The C API
+
+##### 27 An Overview of the C API
+
+##### 28 Extending Your Application
+
+##### 29 Calling C from Lua
+
+##### 30 Techniques for Writing C Functions
+
+##### 31 User-Defined Types in C
+
+##### 32 Managing Resources
+
+##### 33 Threads and States
+
+### Basic: Programming in Lua
+
+Reference book: Programming in Lua (by John Bach & Claudia Alves & Rufus Stewart), 4th Edition
+
+
+#### Part One: Language itself
+
+##### 01 Getting Started
+
+##### 02 Types and Values
+
+##### 03 Expressions
+
+##### 04 Operators
+
+##### 05 Functions
+
+##### 06 More about Functions
+
+##### 07 Iterators and the Generic FOR
+
+##### 08 Compilation, Execution, and Errors
+
+##### 09 Coroutines
+
+##### 10 Completed Examples
+
+#### Part Two: Tables and Objects
+
+##### 11 Data Structures
+
+##### 12 Data Files and Persistence
+
+##### 13 Metatables and Metamethods
+
+##### 14 Environment
+
+##### 15 Modules and Packages
+
+##### 16 Object Oriented Programming
+
+##### 17 Weak Tables and Finanlizers
+
+#### Part Three: Standard Libraries
+
+##### 18 Math Library
+
+##### 19 Library for Bitwise Operations
+
+##### 20 Library for Working with Tables
+
+##### 21 Library for Working with Strings
+
+##### 22 Library I / O
+
+##### 23 Library of Operating Room Functions
+
+##### 24 Debug Library
+
+#### Part Four: WITH API
+
+##### 25 Overview of the C API
+
+##### 26 Extending Your Application
+
+##### 27 Calling C from Lua
+
+##### 28 Techniques for Writing Functions in C
+
+##### 29 User-Defined Types in C
+
+##### 30 Resource Management
+
+##### 31 Threads and States
+
+##### 32 Memory Management
+
+## Roblox Specific: Luau
+
+Luau is a fast, small, safe, gradually typed embeddable scripting language derived from Lua.
+
+ (see:Roblox Studio)
+### luau project in Github
+
+## Standard React
+ (see:Roblox Specific: roact)
+## Roblox Specific: roact
+
+A view management library for Roblox Lua similar to React
+
+ (see:Roblox Studio)
+### roact project in Github
+
+# Platform
+
+## Roblox Studio
+
+# Resource
+
+## Roblox in Github
+
+## My Github Learning Repo
