@@ -76,10 +76,10 @@
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="Language" FOLDED="true" POSITION="bottom_or_right" ID="ID_502365818" CREATED="1694973193345" MODIFIED="1694973197540">
-<node TEXT="Standard Lua" FOLDED="true" ID="ID_1672396280" CREATED="1694978552378" MODIFIED="1694979585918">
-<arrowlink DESTINATION="ID_389330883" MIDDLE_LABEL="Enhancing" STARTINCLINATION="151.5 pt;0 pt;" ENDINCLINATION="173.24999 pt;-6.75 pt;"/>
-<node TEXT="Basic: Programming in Lua (Roberto)" FOLDED="true" ID="ID_879108092" CREATED="1694977802683" MODIFIED="1694978530103" LINK="https://www.amazon.com/exec/obidos/ASIN/8590379868/lua-docs-20">
+<node TEXT="Language" POSITION="bottom_or_right" ID="ID_502365818" CREATED="1694973193345" MODIFIED="1694973197540">
+<node TEXT="Standard Lua" ID="ID_1672396280" CREATED="1694978552378" MODIFIED="1694980007065">
+<arrowlink DESTINATION="ID_371755580"/>
+<node TEXT="Basic: Programming in Lua (Roberto)" ID="ID_879108092" CREATED="1694977802683" MODIFIED="1694978530103" LINK="https://www.amazon.com/exec/obidos/ASIN/8590379868/lua-docs-20">
 <hook URI="img/programming-in-lua_roberto.png" SIZE="1.0" NAME="ExternalObject"/>
 <node TEXT="Part One: The Basics" FOLDED="true" ID="ID_657934861" CREATED="1694977845016" MODIFIED="1694977853344">
 <node TEXT="01 Getting Started" ID="ID_36812977" CREATED="1694977853349" MODIFIED="1694977859468"/>
@@ -123,7 +123,7 @@
 <node TEXT="33 Threads and States" ID="ID_873549823" CREATED="1694978167368" MODIFIED="1694978176567"/>
 </node>
 </node>
-<node TEXT="Basic: Programming in Lua" POSITION="bottom_or_right" ID="ID_1711928670" CREATED="1694973197543" MODIFIED="1694978402896" LINK="https://lua.org/"><richcontent TYPE="NOTE">
+<node TEXT="Basic: Programming in Lua" FOLDED="true" POSITION="bottom_or_right" ID="ID_1711928670" CREATED="1694973197543" MODIFIED="1694978402896" LINK="https://lua.org/"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -178,7 +178,9 @@
 </node>
 </node>
 </node>
-<node TEXT="Roblox Specific: Luau" FOLDED="true" ID="ID_371755580" CREATED="1694973203745" MODIFIED="1694975088085" LINK="https://luau-lang.org/"><richcontent TYPE="NOTE">
+<node TEXT="Roblox Specific: Luau" FOLDED="true" ID="ID_371755580" CREATED="1694973203745" MODIFIED="1694979998836" LINK="https://luau-lang.org/">
+<arrowlink DESTINATION="ID_128181634"/>
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -192,10 +194,12 @@
 </richcontent>
 <node TEXT="luau project in Github" ID="ID_1250353481" CREATED="1694978657310" MODIFIED="1694978673477" LINK="https://github.com/Roblox/luau"/>
 </node>
-<node TEXT="Standard React" ID="ID_389330883" CREATED="1694978583644" MODIFIED="1694979568498">
-<arrowlink DESTINATION="ID_128181634" MIDDLE_LABEL="Scripting" STARTINCLINATION="129 pt;21.75 pt;" ENDINCLINATION="129 pt;21.75 pt;"/>
+<node TEXT="Standard React" ID="ID_389330883" CREATED="1694978583644" MODIFIED="1694980015130">
+<arrowlink DESTINATION="ID_1047997492"/>
 </node>
-<node TEXT="Roblox Specific: roact" FOLDED="true" ID="ID_1047997492" CREATED="1694978701565" MODIFIED="1694978770508"><richcontent TYPE="NOTE">
+<node TEXT="Roblox Specific: roact" FOLDED="true" ID="ID_1047997492" CREATED="1694978701565" MODIFIED="1694980021502">
+<arrowlink DESTINATION="ID_128181634"/>
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -210,10 +214,10 @@
 <node TEXT="roact project in Github" ID="ID_1723227459" CREATED="1694978712780" MODIFIED="1694978732138" LINK="https://github.com/Roblox/roact"/>
 </node>
 </node>
-<node TEXT="Platform" FOLDED="true" POSITION="bottom_or_right" ID="ID_569096346" CREATED="1694973213169" MODIFIED="1694973217136">
+<node TEXT="Platform" POSITION="bottom_or_right" ID="ID_569096346" CREATED="1694973213169" MODIFIED="1694973217136">
 <node TEXT="Roblox Studio" ID="ID_128181634" CREATED="1694973217139" MODIFIED="1694973222737"/>
 </node>
-<node TEXT="Resource" FOLDED="true" POSITION="bottom_or_right" ID="ID_1838299018" CREATED="1694973229512" MODIFIED="1694973231833">
+<node TEXT="Resource" POSITION="bottom_or_right" ID="ID_1838299018" CREATED="1694973229512" MODIFIED="1694973231833">
 <node TEXT="Roblox in Github" ID="ID_144027276" CREATED="1694978807879" MODIFIED="1694978817378" LINK="https://github.com/roblox"/>
 <node TEXT="My Github Learning Repo" ID="ID_1601212269" CREATED="1694979611954" MODIFIED="1694979629470" LINK="https://github.com/yasenstar/roblox_luau_lua"/>
 </node>
