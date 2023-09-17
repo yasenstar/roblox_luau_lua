@@ -1,6 +1,10 @@
 # Learning Roblox Game Programming
 
 ## (base on Lua / Luau)
+
+![Lua](/img/Lua_logo.png)
+
+![Luau](/img/Luau_logo.png)
  
 This is the repository to hold hands-on practices on learning the basic toolset (Lua/Luau), then searving the game programming in Roblox Studio.
 
