@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8"><title>Roblox Game Programming</title>
+<style type="text/css">
+    body {color: #3c3836; font-size: 11pt; font-family: &quot;SansSerif&quot;, sans-serif; }
+li { list-style: none;  margin: 0; }
+p { margin: 0; }
+
+span.l { color: red; font-weight: bold; }
+
+a.mapnode:link,
+a.mapnode:visited,
+a.mapnode:active,
+a.mapnode:hover {
+    text-decoration: none; color: black;
+}
+a.mapnode:hover { background: #eeeee0; }
+span.foldopened, span.foldclosed  {
+    font-size: xx-small;
+    border-width: 1;
+    font-family: monospace;
+    padding: 0em 0.25em 0em 0.25em;
+    background: #e0e0e0;
+    cursor:pointer;
+}
+span.foldopened  {
+    color: white;
+    VISIBILITY: visible;
+}
+span.foldclosed {
+    color: #666666;
+    VISIBILITY: hidden;
+}
+span.foldspecial {
+    color: #666666;
+    font-size: xx-small;
+    border-style: none solid solid none;
+    border-color: #CCCCCC;
+    border-width: 1;
+    font-family: sans-serif;
+    padding: 0em 0.1em 0em 0.1em;
+    background: #e0e0e0;
+    cursor:pointer;
+}
+
+</style>
+</head>
+<body style="background-color:#fbf1c7;">
+<script type="text/javascript">
+// Here we implement folding. It works fine with MSIE5.5, MSIE6.0 and
+// Mozilla 0.9.6.
+
+if (document.layers) {
+    //Netscape 4 specific code
+    pre = 'document.';
+    post = ''; }
+if (document.getElementById) {
+    //Netscape 6 specific code
+    pre = 'document.getElementById("';
+    post = '").style'; }
+if (document.all) {
+    //IE4+ specific code
+    pre = 'document.all.';
+    post = '.style'; }
+
+function layer_exists(layer) {
+    try {
+	eval(pre + layer + post);
+	return true; }
+    catch (error) {
+	return false; }}
+
+function show_layer(layer) {
+    eval(pre + layer + post).position = 'relative';
+    eval(pre + layer + post).visibility = 'visible'; }
+
+function hide_layer(layer) {
+    eval(pre + layer + post).visibility = 'hidden';
+    eval(pre + layer + post).position = 'absolute'; }
+
+function hide_folder(folder) {
+    hide_folding_layer(folder);
+    show_layer('show'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function show_folder(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+	show_layer('show'+folder+'_'+i); }
+}
+function show_folder_completely(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+	show_folder_completely(folder+'_'+i); }
+}
+
+
+
+function hide_folding_layer(folder) {
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+	hide_folding_layer(folder+'_'+i); }
+
+    hide_layer('hide'+folder);
+    hide_layer('show'+folder);
+    hide_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function fold_document() {
+    var i;
+    var folder = '1';
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+	hide_folder(folder+'_'+i); }
+}
+
+function unfold_document() {
+    var i;
+    var folder = '1';
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+	show_folder_completely(folder+'_'+i); }
+}
+
+</script>
+<SPAN class="foldspecial" onclick="unfold_document()">All +</SPAN>
+<SPAN class="foldspecial" onclick="fold_document()">All -</SPAN>
+<div style="background-color:#282828;">
+<p><span style="color: #fdf6e3; font-size: 18pt; font-family: &quot;Dialog&quot;, sans-serif; ">Roblox Game Programming</span></div>
+<ul>
+<li><div style="background-color:#fbf1c7;">
+<span style="color: #282828; font-size: 16pt; font-family: &quot;Dialog&quot;, sans-serif; ">Language</span></div>
+<ul>
+<li><div style="background-color:#ebdbb2;">
+<span style="color: #282828; font-size: 14pt; ">Standard Lua</span></div>
+<ul>
+<li><div style="background-color:#d79921;">
+<span style="color: #282828; font-size: 12pt; "><a href="https://www.amazon.com/exec/obidos/ASIN/8590379868/lua-docs-20" target="_blank">Basic: Programming in Lua (Roberto)</a>
+</span></div>
+<ul>
+<li><div style="background-color:#458588;">
+<span style="color: #ffffff; ">Part One: The Basics</span></div>
+<ul>
+<li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">01 Getting Started</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">02 Interlude: The Eight-Queen Puzzle</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">03 Numbers</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">04 Strings</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">05 Tables</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">06 Functions</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">07 The External World</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">08 Filling some Gaps</span></div>
+</li></ul>
+</li><li><div style="background-color:#458588;">
+<span id="show1_1" class="foldclosed" onClick="show_folder('1_1')" style="POSITION: absolute">+</span> <span id="hide1_1" class="foldopened" onClick="hide_folder('1_1')">-</span>
+<span style="color: #ffffff; ">Part Two: Real Programming</span></div>
+<ul id="fold1_1" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">09 Closures</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">10 Pattern Matching</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">11 Interlude: Most Frequent Words</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">12 Date and Time</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">13 Bits and Bytes</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">14 Data Structures</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">15 Data Files and Serialization</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">16 Compilation, Execution, and Errors</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">17 Modules and Packages</span></div>
+</li></ul>
+</li><li><div style="background-color:#458588;">
+<span id="show1_2" class="foldclosed" onClick="show_folder('1_2')" style="POSITION: absolute">+</span> <span id="hide1_2" class="foldopened" onClick="hide_folder('1_2')">-</span>
+<span style="color: #ffffff; ">Part Three: Lua-isms</span></div>
+<ul id="fold1_2" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">18 Iterators and the Generic for</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">19 Interlude: Markov Chain Algorithm</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">20 Metatables and Metamethods</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">21 Object-Oriented Programming</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">22 The Environment</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">23 Garbage</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">24 Coroutines</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">25 Reflection</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">26 Interlude: Multithreading with Coroutines</span></div>
+</li></ul>
+</li><li><div style="background-color:#458588;">
+<span id="show1_3" class="foldclosed" onClick="show_folder('1_3')" style="POSITION: absolute">+</span> <span id="hide1_3" class="foldopened" onClick="hide_folder('1_3')">-</span>
+<span style="color: #ffffff; ">Part Four: The C API</span></div>
+<ul id="fold1_3" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">27 An Overview of the C API</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">28 Extending Your Application</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">29 Calling C from Lua</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">30 Techniques for Writing C Functions</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">31 User-Defined Types in C</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">32 Managing Resources</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">33 Threads and States</span></div>
+</li></ul>
+</li></ul>
+</li><li><div style="background-color:#d79921;">
+<span id="show1_4" class="foldclosed" onClick="show_folder('1_4')" style="POSITION: absolute">+</span> <span id="hide1_4" class="foldopened" onClick="hide_folder('1_4')">-</span>
+<span style="color: #282828; font-size: 12pt; "><a href="https://lua.org/" target="_blank">Basic: Programming in Lua</a>
+</span>
+    <p>
+      Reference book: Programming in Lua (by John Bach &amp; Claudia Alves &amp; Rufus Stewart), 4th Edition
+    </p>
+  </div>
+<ul id="fold1_4" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#458588;">
+<span id="show1_4_1" class="foldclosed" onClick="show_folder('1_4_1')" style="POSITION: absolute">+</span> <span id="hide1_4_1" class="foldopened" onClick="hide_folder('1_4_1')">-</span>
+<span style="color: #ffffff; ">Part One: Language itself</span></div>
+<ul id="fold1_4_1" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">01 Getting Started</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">02 Types and Values</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">03 Expressions</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">04 Operators</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">05 Functions</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">06 More about Functions</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">07 Iterators and the Generic FOR</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">08 Compilation, Execution, and Errors</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">09 Coroutines</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">10 Completed Examples</span></div>
+</li></ul>
+</li><li><div style="background-color:#458588;">
+<span id="show1_4_2" class="foldclosed" onClick="show_folder('1_4_2')" style="POSITION: absolute">+</span> <span id="hide1_4_2" class="foldopened" onClick="hide_folder('1_4_2')">-</span>
+<span style="color: #ffffff; ">Part Two: Tables and Objects</span></div>
+<ul id="fold1_4_2" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">11 Data Structures</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">12 Data Files and Persistence</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">13 Metatables and Metamethods</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">14 Environment</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">15 Modules and Packages</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">16 Object Oriented Programming</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">17 Weak Tables and Finanlizers</span></div>
+</li></ul>
+</li><li><div style="background-color:#458588;">
+<span id="show1_4_3" class="foldclosed" onClick="show_folder('1_4_3')" style="POSITION: absolute">+</span> <span id="hide1_4_3" class="foldopened" onClick="hide_folder('1_4_3')">-</span>
+<span style="color: #ffffff; ">Part Three: Standard Libraries</span></div>
+<ul id="fold1_4_3" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">18 Math Library</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">19 Library for Bitwise Operations</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">20 Library for Working with Tables</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">21 Library for Working with Strings</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">22 Library I / O</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">23 Library of Operating Room Functions</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">24 Debug Library</span></div>
+</li></ul>
+</li><li><div style="background-color:#458588;">
+<span id="show1_4_4" class="foldclosed" onClick="show_folder('1_4_4')" style="POSITION: absolute">+</span> <span id="hide1_4_4" class="foldopened" onClick="hide_folder('1_4_4')">-</span>
+<span style="color: #ffffff; ">Part Four: WITH API</span></div>
+<ul id="fold1_4_4" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">25 Overview of the C API</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">26 Extending Your Application</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">27 Calling C from Lua</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">28 Techniques for Writing Functions in C</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">29 User-Defined Types in C</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">30 Resource Management</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">31 Threads and States</span></div>
+</li><li><div style="background-color:#b16286;">
+<span style="color: #ffffff; ">32 Memory Management</span></div>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li><div style="background-color:#ebdbb2;">
+<span id="show1_5" class="foldclosed" onClick="show_folder('1_5')" style="POSITION: absolute">+</span> <span id="hide1_5" class="foldopened" onClick="hide_folder('1_5')">-</span>
+<span style="color: #282828; font-size: 14pt; "><a href="https://luau-lang.org/" target="_blank">Roblox Specific: Luau</a>
+</span>
+    <p>
+      Luau is a fast, small, safe, gradually typed embeddable scripting language derived from Lua.
+    </p>
+  </div>
+<ul id="fold1_5" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#d79921;">
+<span style="color: #282828; font-size: 12pt; "><a href="https://github.com/Roblox/luau" target="_blank">luau project in Github</a>
+</span></div>
+</li></ul>
+</li><li><div style="background-color:#ebdbb2;">
+<span style="color: #282828; font-size: 14pt; ">Standard React</span></div>
+</li><li><div style="background-color:#ebdbb2;">
+<span id="show1_6" class="foldclosed" onClick="show_folder('1_6')" style="POSITION: absolute">+</span> <span id="hide1_6" class="foldopened" onClick="hide_folder('1_6')">-</span>
+<span style="color: #282828; font-size: 14pt; ">Roblox Specific: roact</span>
+    <p>
+      A view management library for Roblox Lua similar to React
+    </p>
+  </div>
+<ul id="fold1_6" style="POSITION: relative; VISIBILITY: visible;">
+<li><div style="background-color:#d79921;">
+<span style="color: #282828; font-size: 12pt; "><a href="https://github.com/Roblox/roact" target="_blank">roact project in Github</a>
+</span></div>
+</li></ul>
+</li></ul>
+</li><li><div style="background-color:#fbf1c7;">
+<span style="color: #282828; font-size: 16pt; font-family: &quot;Dialog&quot;, sans-serif; ">Platform</span></div>
+<ul>
+<li><div style="background-color:#ebdbb2;">
+<span style="color: #282828; font-size: 14pt; ">Roblox Studio</span></div>
+</li></ul>
+</li><li><div style="background-color:#fbf1c7;">
+<span style="color: #282828; font-size: 16pt; font-family: &quot;Dialog&quot;, sans-serif; ">Resource</span></div>
+<ul>
+<li><div style="background-color:#ebdbb2;">
+<span style="color: #282828; font-size: 14pt; "><a href="https://github.com/roblox" target="_blank">Roblox in Github</a>
+</span></div>
+</li><li><div style="background-color:#ebdbb2;">
+<span style="color: #282828; font-size: 14pt; "><a href="https://github.com/yasenstar/roblox_luau_lua" target="_blank">My Github Learning Repo</a>
+</span></div>
+</li></ul>
+</li></ul>
+<SCRIPT type="text/javascript">
+fold_document();
+</SCRIPT>
+</body>
+</html>
