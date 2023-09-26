@@ -81,7 +81,7 @@
 <arrowlink DESTINATION="ID_371755580"/>
 <node TEXT="Basic: Programming in Lua (Roberto)" ID="ID_879108092" CREATED="1694977802683" MODIFIED="1694978530103" LINK="https://www.amazon.com/exec/obidos/ASIN/8590379868/lua-docs-20">
 <hook URI="img/programming-in-lua_roberto.png" SIZE="1.0" NAME="ExternalObject"/>
-<node TEXT="Part One: The Basics" FOLDED="true" ID="ID_657934861" CREATED="1694977845016" MODIFIED="1694977853344">
+<node TEXT="Part One: The Basics" ID="ID_657934861" CREATED="1694977845016" MODIFIED="1694977853344">
 <node TEXT="01 Getting Started" ID="ID_36812977" CREATED="1694977853349" MODIFIED="1694977859468"/>
 <node TEXT="02 Interlude: The Eight-Queen Puzzle" ID="ID_896916587" CREATED="1694977860567" MODIFIED="1694977896177"/>
 <node TEXT="03 Numbers" ID="ID_1014364857" CREATED="1694977896479" MODIFIED="1694977901331"/>
@@ -133,8 +133,7 @@
       Reference book: Programming in Lua (by John Bach &amp; Claudia Alves &amp; Rufus Stewart), 4th Edition
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <hook URI="img/programming-in-lua_claudia.png" SIZE="1.0" NAME="ExternalObject"/>
 <node TEXT="Part One: Language itself" FOLDED="true" ID="ID_804940156" CREATED="1694974438406" MODIFIED="1694974447913">
 <node TEXT="01 Getting Started" POSITION="bottom_or_right" ID="ID_1664844322" CREATED="1694974330871" MODIFIED="1694974347424"/>
@@ -190,8 +189,7 @@
       Luau is a fast, small, safe, gradually typed embeddable scripting language derived from Lua.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="luau project in Github" ID="ID_1250353481" CREATED="1694978657310" MODIFIED="1694978673477" LINK="https://github.com/Roblox/luau"/>
 </node>
 <node TEXT="Standard React" ID="ID_389330883" CREATED="1694978583644" MODIFIED="1694980015130">
@@ -209,8 +207,7 @@
       A view management library for Roblox Lua similar to React
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="roact project in Github" ID="ID_1723227459" CREATED="1694978712780" MODIFIED="1694978732138" LINK="https://github.com/Roblox/roact"/>
 </node>
 </node>
