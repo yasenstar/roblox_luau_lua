@@ -1,0 +1,2 @@
+-- Write a function to remove a slice from a string
+-- the slice should be given by its initial position and its length
