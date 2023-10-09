@@ -83,7 +83,7 @@
 <hook URI="img/programming-in-lua_roberto.png" SIZE="1.0" NAME="ExternalObject"/>
 <node TEXT="Part One: Lua - The Basics" ID="ID_657934861" CREATED="1694977845016" MODIFIED="1696683472380">
 <node TEXT="01 Getting Started" ID="ID_36812977" CREATED="1694977853349" MODIFIED="1694977859468">
-<node TEXT="Useful commands in Lua Prompt" ID="ID_1200185322" CREATED="1696683928534" MODIFIED="1696683990940">
+<node TEXT="Useful commands in Lua Prompt" FOLDED="true" ID="ID_1200185322" CREATED="1696683928534" MODIFIED="1696683990940">
 <node TEXT="Print one echo" FOLDED="true" POSITION="bottom_or_right" ID="ID_799646215" CREATED="1696683962134" MODIFIED="1696683969430">
 <node TEXT="os.execute(&quot;echo &apos;hello world&apos; &quot;)" ID="ID_42709468" CREATED="1696683969432" MODIFIED="1696691327346"/>
 </node>
@@ -131,13 +131,14 @@
 </node>
 <node TEXT="Precedence" ID="ID_183336400" CREATED="1696638310180" MODIFIED="1696638316817"/>
 </node>
-<node TEXT="04 Strings" ID="ID_1380777843" CREATED="1694977901519" MODIFIED="1694977905146">
+<node TEXT="04 Strings" FOLDED="true" ID="ID_1380777843" CREATED="1694977901519" MODIFIED="1694977905146">
 <node TEXT="Literal strings" ID="ID_1179908512" CREATED="1696684043045" MODIFIED="1696684046591">
 <node TEXT="\z: skips all subsequent space characters in the string until the first non-space character" ID="ID_1746273663" CREATED="1696696886401" MODIFIED="1696696949617"/>
 </node>
 <node TEXT="Long strings" ID="ID_765034260" CREATED="1696684050526" MODIFIED="1696684054385"/>
 <node TEXT="Coercions" ID="ID_2253210" CREATED="1696684057662" MODIFIED="1696684062728">
 <node TEXT="tonumber(string)" ID="ID_1984012408" CREATED="1696697035696" MODIFIED="1696697042064"/>
+<node TEXT="tonumber(string, base): base between 2 and 36" ID="ID_234245316" CREATED="1696697223131" MODIFIED="1696697368580"/>
 <node TEXT="tostring(number)" ID="ID_1121541454" CREATED="1696697042448" MODIFIED="1696697051444"/>
 </node>
 <node TEXT="The String Library" ID="ID_817555606" CREATED="1696684068805" MODIFIED="1696684073450">
@@ -149,13 +150,35 @@
 <node TEXT="string.sub(s, i, j): extracts a piece of the string s, from the i-th to the j-th character inclusive" ID="ID_1890753134" CREATED="1696684139086" MODIFIED="1696684215903"/>
 <node TEXT="string.char(ascii #)" ID="ID_1854716048" CREATED="1696684222417" MODIFIED="1696684250237"/>
 <node TEXT="string.byte(s)" ID="ID_1288138175" CREATED="1696684250934" MODIFIED="1696684257558"/>
+<node TEXT="string.byte(s, i, j)" ID="ID_69965661" CREATED="1696697674632" MODIFIED="1696697682393"/>
 <node TEXT="string.format()" ID="ID_1423974306" CREATED="1696684265062" MODIFIED="1696684276474"/>
 <node TEXT="string.find(s, sub of s)" ID="ID_1030264112" CREATED="1696684278222" MODIFIED="1696684288159"/>
 <node TEXT="string.gsub" ID="ID_1591824223" CREATED="1696695183864" MODIFIED="1696695188683"/>
 </node>
 <node TEXT="Unicode" ID="ID_1022469043" CREATED="1696684295558" MODIFIED="1696684297776"/>
 </node>
-<node TEXT="05 Tables" ID="ID_601343831" CREATED="1694977905312" MODIFIED="1694977908858"/>
+<node TEXT="05 Tables" ID="ID_601343831" CREATED="1694977905312" MODIFIED="1696811324691"><richcontent TYPE="NOTE">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Lua uses tables to represent arrays, sets, records, and many other data structures in a simple, uniform, and efficient way.
+    </p>
+    <p>
+      Lua uses tables to represent packages and objects as well.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Table Indices" ID="ID_687795402" CREATED="1696811349398" MODIFIED="1696811354401"/>
+<node TEXT="Table Constructors" ID="ID_1292103142" CREATED="1696811367076" MODIFIED="1696811371446">
+<node TEXT="Constructions are expressions that create and initialize tables." ID="ID_13612778" CREATED="1696811378427" MODIFIED="1696811398455"/>
+<node TEXT="The simplest constructor is the empty constructor, {}." ID="ID_1891727153" CREATED="1696811399364" MODIFIED="1696811412335"/>
+<node TEXT="Arrays, Lists, and Sequences" ID="ID_648400800" CREATED="1696811421813" MODIFIED="1696811428971"/>
+</node>
+</node>
 <node TEXT="06 Functions" ID="ID_1892974341" CREATED="1694977909039" MODIFIED="1694977911955"/>
 <node TEXT="07 The External World" ID="ID_232263399" CREATED="1694977912327" MODIFIED="1694977917689"/>
 <node TEXT="08 Filling some Gaps" ID="ID_192861287" CREATED="1694977919035" MODIFIED="1694977924794"/>
